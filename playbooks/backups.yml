@@ -1,0 +1,8 @@
+- hosts: host_id
+  become: yes
+  tasks:
+    - name: Put backup on server
+      ansible.builtin.copy:
+        src:  ../backup_dir/
+        dest: /home/backup_dir
+
